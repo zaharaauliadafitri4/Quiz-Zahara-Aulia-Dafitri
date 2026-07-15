@@ -1,0 +1,28 @@
+:root {
+    --navy : #13294b;
+    --gold : #f2a93b;
+}
+
+.navbar-brand-icon {color: var(--gold)}
+.navbar-link-page { position: relative;}
+.navbar-link-page::after {
+    content: '';
+    position: absolute; left: 8px; right: 8px; bottom: 0;
+    height: 2px; background: var(--gold);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform .25s ease;
+}
+.navbar-link-page.active::after {transform: scaleX(1);}
+.navbar-link-page.active::after {transform: scaleX(1);}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--navy)0%, #1e3f6e 100%);
+    padding: 100px 0 70px;
+}
+.page-view {display: none;}
+.page-view.active {display: block; animation: fadeUp .3s ease;}
+
+@keyframes fadeUp{
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
